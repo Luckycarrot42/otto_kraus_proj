@@ -13,7 +13,7 @@ Vue.use(VueRouter)
   {
     path: '/toys',
     name: 'Toys',
-    component: () => import(/* webpackChunkName: "Toys" */ '../views/ToysComp.vue'),
+    component: () => import(/* webpackChunkName: "Toys" */ '../views/ToysComp.vue'), //toys component no necesita ser importado arriba
     meta: {
       login: true //es posible escoger otra palabra para designar necesidad de autentificación
     }
