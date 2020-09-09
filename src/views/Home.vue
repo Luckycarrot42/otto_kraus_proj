@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="loginpage pt-4">
+    <h1>Bienvenido a Jugueterias Otto Kraus</h1>
+    <login-comp></login-comp>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import LoginComp from '../components/LoginComp'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    LoginComp
+  },
+  computed: {
+    ...mapState(['currentUser'])
   }
 }
 </script>
+
+<style scoped>
+  .loginpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
